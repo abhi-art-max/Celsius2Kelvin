@@ -1,0 +1,29 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <b>Input Temperature in Celsius :  </b>
+        <input type="text" id="ip"><br>
+        <b id="sl"></b>
+        <b id="bline"></b>
+        <script>
+            let input = document.getElementById("ip");
+            function find(){
+                const sl = document.getElementById("sl");
+                const bline = document.getElementById("bline");
+                if(input.value=='')
+                {
+                    sl.innerText='';
+                    bline.innerText='';
+                }
+                else
+                {
+                    sl.innerText="Temperature in Kelvin is : ";
+                    bline.innerText = (parseFloat(input.value)*1.8 + 32);
+
+                }
+            }
+            input.addEventListener('input',find);
+        </script>
+    </body>
+</html>
